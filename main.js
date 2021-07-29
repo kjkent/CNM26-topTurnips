@@ -86,13 +86,11 @@ const printCard = (hand, round) => {
         console.log(`1. Average weight: ${hand0[round].weight} grams`);
         console.log(`2. Average size: ${hand0[round].size} centimetres`);
         console.log(`3. Gestation time: ${hand0[round].gestTime} days`);
-        console.log("");
     } else {
         console.log(`Turnip variety: ${hand1[round].name}`);
         console.log(`1. Average weight: ${hand1[round].weight} grams`);
         console.log(`2. Average size: ${hand1[round].size} centimetres`);
         console.log(`3. Gestation time: ${hand1[round].gestTime} days`);
-        console.log("");
     }
 
 }
@@ -139,6 +137,7 @@ const printCard = (hand, round) => {
         console.log("Opponent card:");
         console.log("");
         printCard(1, currentRound);
+        console.log("");
     
         let chosenAttribute = response.attribute;
     
@@ -171,7 +170,6 @@ const printCard = (hand, round) => {
         currentRound++;
         console.log("");
         console.log("wait 10 seconds");
-        console.log("");
         await sleep(10000);
     }
 })();
